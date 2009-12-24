@@ -26,7 +26,7 @@ class Wave(models.Model):
     user = models.OneToOneField(User, verbose_name=_(u'user'),
         limit_choices_to={'is_active': True})
     kill_defaults = models.BooleanField(_(u'kill default commands'),
-        help_text=_(u'Selecting this removes all default Shortwave commands.'))
+        help_text=_(u'Select to remove all default Shortwave commands.'))
 
     class Meta:
         ordering = ('user', )
