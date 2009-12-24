@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+{% load i18n %}
+
+<meta charset="utf-8">
+<title>{% trans "User Shortwaves" %}</title>
+
+
+<h1>{% trans "User Shortwaves" %}</h1>
+
+<p>{% blocktrans with '<a href="http://shortwaveapp.com/">Shortwave</a>' as shortwave_link and '<a href="http://shauninman.com/">Shaun Inman</a>' as inman_link%}
+    {{ shortwave_link }} is an extensible quick-search and shortcut bookmark,
+    created by {{ inman_link }}. Below is a list of custom Shortwave command
+    files created by users on this site.
+{% endblocktrans %}</p>
+
+
+{% if wave_list %}
+  <p>
+    {% if not page_obj.has_other_pages %}
+      {% trans "Showing all shortwaves." %}
+    {% else %}
+      {% blocktrans with page_obj.start_index as start and page_obj.end_index as end and paginator.count as total %}
+        Showing {{ start }}-{{ end }} of {{ total }} shortwaves.
+      {% endblocktrans %}
+    {% endif %}
+  </p>
+
+  <ol>
+    {% for wave in wave_list %}
+      <li><a href="{{ wave.get_absolute_url }}">{{ wave.user }}</a></li>
+    {% endfor %}
+  </ol>
+{% else %}
+  <p>{% blocktrans with '<a href="http://shortwaveapp.com/">Shortwave</a>' as shortwave_link %}
+      No one on this site has caught a {{ shortwave_link }} yet. They’re missing out.
+  {% endblocktrans %}</p>
+{% endif %}
+
+
+{% if page_obj.has_other_pages %}
+  <p>
+    {% if page_obj.has_previous %}
+      <a href="?page={{ page_obj.previous_page_number }}">{% trans "Previous" %}</a>
+    {% else %}
+      {% trans "Previous" %}
+    {% endif %}
+    |
+    {% if page_obj.has_next %}
+      <a href="?page={{ page_obj.next_page_number }}">{% trans "Next" %}</a>
+    {% else %}
+      {% trans "Next" %}
+    {% endif %}
+  </p>
+{% endif %}

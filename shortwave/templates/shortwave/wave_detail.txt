@@ -1,0 +1,13 @@
+{% load i18n %}
+
+{# This must be the first text in the file. #}
+{% if wave.kill_defaults %}
+> #kill-defaults
+{% endif %}
+
+> {% blocktrans with wave.user as user %}Custom Shortwave commands for {{ user }}.{% endblocktrans %}
+> {% blocktrans with "http://shortwaveapp.com/" as shortwave_link %}For more information see {{ shortwave_link }}.{% endblocktrans %}
+
+{% for command in command_list %}
+{{ command.trigger }} {{ command.url|safe }} {{ command.description|safe }}
+{% endfor %}

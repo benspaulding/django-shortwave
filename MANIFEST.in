@@ -1,0 +1,8 @@
+include AUTHORS
+include INSTALL
+include LICENSE
+include README
+include MANIFEST.in
+recursive-include shortwave/fixtures *
+recursive-include shortwave/locale *
+recursive-include shortwave/templates *

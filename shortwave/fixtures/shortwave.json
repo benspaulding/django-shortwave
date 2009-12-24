@@ -1,0 +1,84 @@
+[
+    {
+        "pk": 1,
+        "model": "auth.user",
+        "fields": {
+            "username": "foobar",
+            "first_name": "Foo",
+            "last_name": "Bar",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2009-11-18 22:38:42",
+            "groups": [],
+            "user_permissions": [],
+            "password": "password",
+            "email": "foobar@example.com",
+            "date_joined": "2009-11-13 16:46:49"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.user",
+        "fields": {
+            "username": "bazboo",
+            "first_name": "Baz",
+            "last_name": "Boo",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2009-11-18 22:38:42",
+            "groups": [],
+            "user_permissions": [],
+            "password": "password",
+            "email": "bazboo@example.com",
+            "date_joined": "2009-11-13 16:46:49"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "shortwave.wave",
+        "fields": {
+            "kill_defaults": true,
+            "user": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "shortwave.wave",
+        "fields": {
+            "kill_defaults": false,
+            "user": 2
+        }
+    },
+    {
+        "pk": 1,
+        "model": "shortwave.command",
+        "fields": {
+            "url": "http://www.google.com/search?q=%s",
+            "trigger": "g",
+            "description": "Google Search",
+            "wave": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "shortwave.command",
+        "fields": {
+            "url": "http://www.google.com/search?q=site:%d%20%s",
+            "trigger": "gs",
+            "description": "Search the current site",
+            "wave": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "shortwave.command",
+        "fields": {
+            "url": "http://www.google.com/maps?q=%s&foo=bar",
+            "trigger": "map",
+            "description": "Google Maps <search>",
+            "wave": 2
+        }
+    }
+]
