@@ -5,8 +5,8 @@
 > #kill-defaults
 {% endif %}
 
-> {% blocktrans with wave.user as user %}Custom Shortwave commands for {{ user }}.{% endblocktrans %}
-> {% blocktrans with "http://shortwaveapp.com/" as shortwave_link %}For more information see {{ shortwave_link }}.{% endblocktrans %}
+> {% blocktrans with wave.user as user %}Custom shortwave commands for {{ user }}.{% endblocktrans %}
+> {% blocktrans %}For more information see http://shortwaveapp.com/.{% endblocktrans %}
 
 {% for command in command_list %}
 {{ command.trigger }} {{ command.url|safe }} {{ command.description|safe }}

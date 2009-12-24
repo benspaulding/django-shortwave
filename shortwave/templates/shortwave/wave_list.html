@@ -2,15 +2,16 @@
 {% load i18n %}
 
 <meta charset="utf-8">
-<title>{% trans "User Shortwaves" %}</title>
+<title>{% trans "User shortwaves" %}</title>
 
 
-<h1>{% trans "User Shortwaves" %}</h1>
+<h1>{% trans "User shortwaves" %}</h1>
 
-<p>{% blocktrans with '<a href="http://shortwaveapp.com/">Shortwave</a>' as shortwave_link and '<a href="http://shauninman.com/">Shaun Inman</a>' as inman_link%}
-    {{ shortwave_link }} is an extensible quick-search and shortcut bookmark,
-    created by {{ inman_link }}. Below is a list of custom Shortwave command
-    files created by users on this site.
+<p>{% blocktrans %}
+    <a href="http://shortwaveapp.com/">Shortwave</a> is an extensible
+    quick-search and shortcut bookmark, created by <a
+    href="http://shauninman.com/">Shaun Inman</a>. Below is a list of custom
+    shortwave command files created by users on this site.
 {% endblocktrans %}</p>
 
 
@@ -31,8 +32,9 @@
     {% endfor %}
   </ol>
 {% else %}
-  <p>{% blocktrans with '<a href="http://shortwaveapp.com/">Shortwave</a>' as shortwave_link %}
-      No one on this site has caught a {{ shortwave_link }} yet. They’re missing out.
+  <p>{% blocktrans %}
+      No one on this site has caught a <a href="http://shortwaveapp.com/">shortwave</a>
+      yet. They’re missing out.
   {% endblocktrans %}</p>
 {% endif %}
 
