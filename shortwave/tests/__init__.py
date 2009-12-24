@@ -7,7 +7,7 @@ from shortwave.models import CommandTriggerField
 class ShortwaveTestCase(TestCase):
     """"""
 
-    fixtures = ['shortwaves']
+    fixtures = ['shortwave-test-data']
     urls = 'shortwave.tests.urls'
 
 
