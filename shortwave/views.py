@@ -5,7 +5,7 @@ from shortwave.models import Wave, Command
 
 def wave_list(request):
     """
-    A list view of all shortwaves.
+    A list view of all shortwaves relating to active users.
 
     Templates:
         :template:`shortwave/wave_list.html`
@@ -14,13 +14,13 @@ def wave_list(request):
             A list of :model:`shortwave.Wave` objects.
 
     """
-    return object_list(request, queryset=Wave.objects.all(), paginate_by=50,
+    return object_list(request, queryset=Wave.objects.active(), paginate_by=50,
         template_object_name='wave')
 
 
 def wave_detail(request, username):
     """
-    A custom command file for use with Shortwave.
+    An active user's custom command file for use with Shortwave.
 
     This view returns a custom command file to be used in conjunction with
     `Shaun Inman`_'s Shortwave_ service.
@@ -42,7 +42,7 @@ def wave_detail(request, username):
         'command_list': Command.objects.filter(wave__user__username=username),
     }
 
-    return object_detail(request, queryset=Wave.objects.all(),
+    return object_detail(request, queryset=Wave.objects.active(),
         extra_context=extra_context, mimetype='text/plain; charset=utf-8',
         slug=username, slug_field='user__username',
         template_object_name='wave', template_name='shortwave/wave_detail.txt')

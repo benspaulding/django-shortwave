@@ -5,6 +5,8 @@ from django.utils.translation import ugettext_lazy as _
 from shortwave import forms
 
 
+# Fields.
+
 class CommandTriggerField(models.CharField):
     """Model field for a Shortwave command trigger."""
 
@@ -20,6 +22,18 @@ class CommandTriggerField(models.CharField):
         return super(CommandTriggerField, self).formfield(**defaults)
 
 
+# Managers.
+
+class WaveManager(models.Manager):
+    """A custom manager for Wave objects."""
+
+    def active(self):
+        """Returns only waves for active users."""
+        return self.get_query_set().filter(user__is_active=True)
+
+
+# Models.
+
 class Wave(models.Model):
     """A collection of commands relating to a user."""
 
@@ -27,6 +41,8 @@ class Wave(models.Model):
         limit_choices_to={'is_active': True})
     kill_defaults = models.BooleanField(_(u'kill default commands'),
         help_text=_(u'Select to remove all default Shortwave commands.'))
+
+    objects = WaveManager()
 
     class Meta:
         ordering = ('user', )
