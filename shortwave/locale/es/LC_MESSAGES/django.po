@@ -1,5 +1,5 @@
 # Spanish translation for the django-shortwave project.
-# Copyright (C) 2009, Ben Spaulding.
+# Copyright (C) 2010, Ben Spaulding.
 # This file is distributed under the same license as the django-shortwave package.
 # Ben Spaulding <ben@benspaulding.com>, 2009.
 #
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-shortwave\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-24 11:10-0600\n"
+"POT-Creation-Date: 2010-08-10 10:13-0600\n"
 "PO-Revision-Date: 2009-12-24 11:11-0600\n"
 "Last-Translator: Ben Spaulding <ben@benspaulding.com>\n"
 "Language-Team: \n"
@@ -81,11 +81,11 @@ msgstr "Los comandos personalizados de onda corta para %(user)s."
 msgid "For more information see http://shortwaveapp.com/."
 msgstr "Para más información ver http://shortwaveapp.com/."
 
-#: templates/shortwave/wave_list.html:5 templates/shortwave/wave_list.html:8
+#: templates/shortwave/wave_list.html:6 templates/shortwave/wave_list.html:9
 msgid "User shortwaves"
 msgstr "Ondas cortas del usuario"
 
-#: templates/shortwave/wave_list.html:10
+#: templates/shortwave/wave_list.html:11
 msgid ""
 "\n"
 "    <a href=\"http://shortwaveapp.com/\">Shortwave</a> is an extensible\n"
@@ -101,11 +101,11 @@ msgstr ""
 "lista de comandos personalizados de onda corta los archivos creados por los "
 "usuarios en este sitio.\n"
 
-#: templates/shortwave/wave_list.html:21
+#: templates/shortwave/wave_list.html:22
 msgid "Showing all shortwaves."
 msgstr "Mostrando todas las ondas cortas."
 
-#: templates/shortwave/wave_list.html:23
+#: templates/shortwave/wave_list.html:24
 #, python-format
 msgid ""
 "\n"
@@ -115,7 +115,7 @@ msgstr ""
 "\n"
 "Mostrando %(start)s a %(end)s de los %(total)s ondas cortas."
 
-#: templates/shortwave/wave_list.html:35
+#: templates/shortwave/wave_list.html:36
 msgid ""
 "\n"
 "      No one on this site has caught a <a href=\"http://shortwaveapp.com/"
@@ -127,10 +127,10 @@ msgstr ""
 "Nadie en este sitio ha contraído una <a href=\"http://shortwaveapp.com/"
 "\">onda corta</a> todavía. Están perdiendo."
 
-#: templates/shortwave/wave_list.html:45 templates/shortwave/wave_list.html:47
+#: templates/shortwave/wave_list.html:46 templates/shortwave/wave_list.html:48
 msgid "Previous"
 msgstr "Anterior"
 
-#: templates/shortwave/wave_list.html:51 templates/shortwave/wave_list.html:53
+#: templates/shortwave/wave_list.html:52 templates/shortwave/wave_list.html:54
 msgid "Next"
 msgstr "Próximo"
