@@ -56,6 +56,11 @@ class ViewsTestCase(ShortwaveTestCase):
     def test_detail_2(self):
         request_url = reverse('shortwave-wave-detail', kwargs={'username': 'bazboo'})
         response = self.client.get(request_url)
+        self.assertEqual(response.request['PATH_INFO'], '/shortwave/bazboo/')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response['Content-Type'], 'text/plain; charset=utf-8')
+        self.assertTemplateUsed(response, 'shortwave/wave_detail.txt')
+        self.failUnless(response.context['wave'])
         self.assertNotContains(response, '> #kill-defaults')
         # Test wave syntax and that neither url nor description are escaped.
         self.assertContains(response, 'map http://www.google.com/maps?q=%s&foo=bar Google Maps <search>')
