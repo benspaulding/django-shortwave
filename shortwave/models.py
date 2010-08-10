@@ -45,7 +45,7 @@ class Command(models.Model):
     """A Shortwave command."""
 
     wave = models.ForeignKey(Wave, verbose_name=_(u'wave'),
-        related_name='commands')
+        limit_choices_to={'user__is_active': True}, related_name='commands')
     trigger = CommandTriggerField(_(u'trigger'))
     url = models.CharField(_(u'URL'), max_length=255)
     description = models.CharField(_(u'description'), max_length=75)
