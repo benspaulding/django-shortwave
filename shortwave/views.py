@@ -33,16 +33,8 @@ def wave_detail(request, username):
     Context:
         wave
             A :model:`shortwave.Wave` object.
-        command_list
-            A list of all :model:`shortwave.Command` objects related
-            to ``wave``.
-
     """
-    extra_context = {
-        'command_list': Command.objects.filter(wave__user__username=username),
-    }
-
     return object_detail(request, queryset=Wave.objects.active(),
-        extra_context=extra_context, mimetype='text/plain; charset=utf-8',
-        slug=username, slug_field='user__username',
-        template_object_name='wave', template_name='shortwave/wave_detail.txt')
+        mimetype='text/plain; charset=utf-8', slug=username,
+        slug_field='user__username', template_object_name='wave',
+        template_name='shortwave/wave_detail.txt')

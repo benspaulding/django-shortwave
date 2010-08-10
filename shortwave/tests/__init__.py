@@ -46,7 +46,6 @@ class ViewsTestCase(ShortwaveTestCase):
         self.assertEqual(response['Content-Type'], 'text/plain; charset=utf-8')
         self.assertTemplateUsed(response, 'shortwave/wave_detail.txt')
         self.failUnless(response.context['wave'])
-        self.failUnless(response.context['command_list'])
         # Test that the kill-defaults flag is not only present, but
         # also the very first text.
         self.failUnless(response.content.lstrip().startswith('> #kill-defaults'))

@@ -8,6 +8,6 @@
 > {% blocktrans with wave.user as user %}Custom shortwave commands for {{ user }}.{% endblocktrans %}
 > {% trans "For more information see http://shortwaveapp.com/." %}
 
-{% for command in command_list %}
+{% for command in wave.commands.all %}
 {{ command.trigger }} {{ command.url|safe }} {{ command.description|safe }}
 {% endfor %}
