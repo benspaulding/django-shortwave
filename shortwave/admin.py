@@ -14,7 +14,7 @@ class WaveAdmin(admin.ModelAdmin):
     list_display = ('user', 'command_count', 'kill_defaults')
     list_filter = ('kill_defaults', )
     raw_id_fields = ('user', )
-    search_fields = ('user', )
+    search_fields = ('user__username', )
 
     def command_count(self, obj):
         return obj.commands.count()
