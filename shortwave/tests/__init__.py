@@ -37,6 +37,9 @@ class ViewsTestCase(ShortwaveTestCase):
         self.failUnless(response['Content-Type'], 'text/html; charset=utf-8')
         self.assertTemplateUsed(response, 'shortwave/wave_list.html')
         self.failUnless(response.context['wave_list'])
+        self.assertContains(response, 'foobar')
+        self.assertContains(response, 'bazboo')
+        self.assertNotContains(response, 'wowee')
 
     def test_detail_1(self):
         request_url = reverse('shortwave-wave-detail', kwargs={'username': 'foobar'})
@@ -56,3 +59,10 @@ class ViewsTestCase(ShortwaveTestCase):
         self.assertNotContains(response, '> #kill-defaults')
         # Test wave syntax and that neither url nor description are escaped.
         self.assertContains(response, 'map http://www.google.com/maps?q=%s&foo=bar Google Maps <search>')
+
+    def test_detail_3(self):
+        request_url = reverse('shortwave-wave-detail', kwargs={'username': 'wowee'})
+        response = self.client.get(request_url)
+        self.assertEqual(response.request['PATH_INFO'], '/shortwave/wowee/')
+        # This is user is not active, so we should get a 404.
+        self.assertEqual(response.status_code, 404)
