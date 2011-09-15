@@ -11,7 +11,7 @@ setup(
     description='Shortwave command file management for Django apps.',
     url='http://github.com/benspaulding/django-shortwave/',
     author='Ben Spaulding',
-    author_email='ben@benspaulding.com',
+    author_email='ben@benspaulding.us',
     license='BSD',
     download_url='http://github.com/benspaulding/django-shortwave/tarball/v0.9.0',
     long_description = read('README.rst'),
