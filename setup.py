@@ -1,4 +1,5 @@
 import os
+
 from distutils.core import setup
 
 from shortwave import VERSION
