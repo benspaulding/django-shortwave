@@ -4,10 +4,14 @@ from django.utils.translation import ugettext_lazy as _
 from shortwave.models import Wave, Command
 
 
+# Inlines.
+
 class CommandInline(admin.TabularInline):
     extra = 3
     model = Command
 
+
+# Admins.
 
 class WaveAdmin(admin.ModelAdmin):
     inlines = (CommandInline, )
