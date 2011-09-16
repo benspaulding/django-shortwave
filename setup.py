@@ -1,19 +1,21 @@
 import os
 from distutils.core import setup
 
+from shortwave import VERSION
+
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
     name='django-shortwave',
-    version='0.9.0',
+    version=VERSION,
     description='Shortwave command file management for Django apps.',
     url='http://github.com/benspaulding/django-shortwave/',
     author='Ben Spaulding',
     author_email='ben@benspaulding.us',
     license='BSD',
-    download_url='http://github.com/benspaulding/django-shortwave/tarball/v0.9.0',
+    download_url='https://github.com/benspaulding/django-shortwave/tarball/v%s' % VERSION,
     long_description = read('README.rst'),
     packages = [
         'shortwave',
