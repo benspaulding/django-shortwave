@@ -1,8 +1,8 @@
 include AUTHORS
 include INSTALL
 include LICENSE
-include README.rst
 include MANIFEST.in
+include README.rst
 recursive-include docs *
 recursive-include shortwave/fixtures *
 recursive-include shortwave/locale *
