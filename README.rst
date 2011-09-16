@@ -1,26 +1,21 @@
-===========================================================
- Shortwave command file management for Django applications
-===========================================================
+=================================================
+ Django app for managing Shortwave command files
+=================================================
 
 This application provides the ability for users to create and manage
-custom command files for use with Shortwave_ in Django_ applications.
+custom command files for use with Shortwave_.
 
 Using the instructions found in the `default commands file`_, users can add
 their own commands to a custom wave file. They can then provide the URL of
 their custom commands file to Shortwave_ and save their new bookmarklet.
 
 From that point users can add, delete, and change their custom commands from a
-web interface and their bookmarklet updates immediately (that is the beauty of
+Web interface and their bookmarklet updates immediately (that’s the beauty of
 Shortwave_).
 
-For installation instructions, see INSTALL in this directory.
+Refer to the documentation_ for further information.
 
 .. _Shortwave: http://shortwaveapp.com/
 .. _default commands file: http://shortwaveapp.com/waves.txt
 .. _Django: http://www.djangoproject.com/
-
-Todo
-====
-
-* Add custom admin templates that make setting up the bookmarklet easier.
-* Finish writing tests.
+.. _documentation: http://readthedocs.org/docs/django-shortwave/

@@ -11,7 +11,7 @@ def read(fname):
 setup(
     name='django-shortwave',
     version=VERSION,
-    description='Shortwave command file management for Django apps.',
+    description='Django app for managing Shortwave command files.',
     url='https://github.com/benspaulding/django-shortwave/',
     author='Ben Spaulding',
     author_email='ben@benspaulding.us',
