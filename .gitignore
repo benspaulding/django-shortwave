@@ -3,4 +3,5 @@ dist/
 build/
 *.egg-info
 MANIFEST
+.DS_Store
 docs/_build
