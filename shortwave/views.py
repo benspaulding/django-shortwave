@@ -14,8 +14,9 @@ def wave_list(request):
             A list of :model:`shortwave.Wave` objects.
 
     """
-    return object_list(request, queryset=Wave.objects.active(), paginate_by=50,
-        template_object_name='wave')
+
+    return object_list(request, queryset=Wave.objects.active(),
+        paginate_by=50, template_object_name='wave')
 
 
 def wave_detail(request, username):
@@ -34,6 +35,7 @@ def wave_detail(request, username):
         wave
             A :model:`shortwave.Wave` object.
     """
+
     return object_detail(request, queryset=Wave.objects.active(),
         mimetype='text/plain; charset=utf-8', slug=username,
         slug_field='user__username', template_object_name='wave',
