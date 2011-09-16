@@ -54,7 +54,7 @@ class Wave(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('shortwave-wave-detail', (), {'username': self.user})
+        return ('shortwave_wave_detail', (), {'username': self.user})
 
 
 class Command(models.Model):

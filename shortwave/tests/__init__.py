@@ -30,7 +30,7 @@ class ViewsTestCase(ShortwaveTestCase):
 
     def test_list(self):
         # Be sure we don't mess with named urls.
-        request_url = reverse('shortwave-wave-list')
+        request_url = reverse('shortwave_wave_list')
         response = self.client.get(request_url)
         self.assertEqual(response.request['PATH_INFO'], '/shortwave/')
         self.assertEqual(response.status_code, 200)
@@ -42,7 +42,7 @@ class ViewsTestCase(ShortwaveTestCase):
         self.assertNotContains(response, 'wowee')
 
     def test_detail_1(self):
-        request_url = reverse('shortwave-wave-detail', kwargs={'username': 'foobar'})
+        request_url = reverse('shortwave_wave_detail', kwargs={'username': 'foobar'})
         response = self.client.get(request_url)
         self.assertEqual(response.request['PATH_INFO'], '/shortwave/foobar/')
         self.assertEqual(response.status_code, 200)
@@ -54,7 +54,7 @@ class ViewsTestCase(ShortwaveTestCase):
         self.failUnless(response.content.lstrip().startswith('> #kill-defaults'))
 
     def test_detail_2(self):
-        request_url = reverse('shortwave-wave-detail', kwargs={'username': 'bazboo'})
+        request_url = reverse('shortwave_wave_detail', kwargs={'username': 'bazboo'})
         response = self.client.get(request_url)
         self.assertEqual(response.request['PATH_INFO'], '/shortwave/bazboo/')
         self.assertEqual(response.status_code, 200)
@@ -66,7 +66,7 @@ class ViewsTestCase(ShortwaveTestCase):
         self.assertContains(response, 'map http://www.google.com/maps?q=%s&foo=bar Google Maps <search>')
 
     def test_detail_3(self):
-        request_url = reverse('shortwave-wave-detail', kwargs={'username': 'wowee'})
+        request_url = reverse('shortwave_wave_detail', kwargs={'username': 'wowee'})
         response = self.client.get(request_url)
         self.assertEqual(response.request['PATH_INFO'], '/shortwave/wowee/')
         # This is user is not active, so we should get a 404.
