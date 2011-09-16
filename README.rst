@@ -10,7 +10,7 @@ their own commands to a custom wave file. They can then provide the URL of
 their custom commands file to Shortwave_ and save their new bookmarklet.
 
 From that point users can add, delete, and change their custom commands from a
-Web interface and their bookmarklet updates immediately (that’s the beauty of
+Web interface and their bookmarklet updates immediately (that's the beauty of
 Shortwave_).
 
 Refer to the documentation_ for further information.
