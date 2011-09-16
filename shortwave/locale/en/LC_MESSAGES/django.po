@@ -1,72 +1,80 @@
 # English "translation" for the django-shortwave project.
 # Copyright (C) 2011, Ben Spaulding.
 # This file is distributed under the same license as the django-shortwave package.
-# Ben Spaulding <ben@benspaulding.us>, 2009.
+# Ben Spaulding <ben@benspaulding.us>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: django-shortwave\n"
+"Project-Id-Version: django-shortwave-0.9.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-10 10:13-0600\n"
+"POT-Creation-Date: 2011-09-15 22:09-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: __init__.py:5
+#: __init__.py:32
 msgid "shortwave"
 msgstr ""
 
-#: admin.py:21
+#: admin.py:25
 msgid "No. of commands"
 msgstr ""
 
-#: forms.py:15
+#: forms.py:19
 msgid "Enter a valid trigger."
 msgstr ""
 
-#: models.py:11
+#: models.py:18
 msgid "Shortwave command trigger"
 msgstr ""
 
-#: models.py:26
+#: models.py:45
 msgid "user"
 msgstr ""
 
-#: models.py:28
+#: models.py:47
 msgid "kill default commands"
 msgstr ""
 
-#: models.py:29
+#: models.py:48
 msgid "Select to remove all default Shortwave commands."
 msgstr ""
 
-#: models.py:33 models.py:47
+#: models.py:54 models.py:68
 msgid "wave"
 msgstr ""
 
-#: models.py:34
+#: models.py:55
 msgid "waves"
 msgstr ""
 
-#: models.py:49
+#: models.py:70
 msgid "trigger"
 msgstr ""
 
-#: models.py:50
+#: models.py:71
 msgid "URL"
 msgstr ""
 
-#: models.py:51
+#: models.py:72
 msgid "description"
 msgstr ""
 
-#: models.py:56
+#: models.py:77
 msgid "command"
 msgstr ""
 
-#: models.py:57
+#: models.py:78
 msgid "commands"
+msgstr ""
+
+#: templates/404.html:6 templates/404.html.py:9
+msgid "Page not found"
+msgstr ""
+
+#: templates/404.html:11
+msgid "The page you are looking for cannot be found (error 404)."
 msgstr ""
 
 #: templates/shortwave/wave_detail.txt:8
@@ -79,7 +87,7 @@ msgid "For more information see http://shortwaveapp.com/."
 msgstr ""
 
 #: templates/shortwave/wave_list.html:6 templates/shortwave/wave_list.html:9
-msgid "User shortwaves"
+msgid "User Shortwaves"
 msgstr ""
 
 #: templates/shortwave/wave_list.html:11
@@ -89,14 +97,15 @@ msgid ""
 "    quick-search and shortcut bookmark, created by <a\n"
 "    href=\"http://shauninman.com/\">Shaun Inman</a>. Below is a list of "
 "custom\n"
-"    shortwave command files created by users on this site.\n"
+"    shortwave command files created by users on this site, which they use\n"
+"    with Shortwave.\n"
 msgstr ""
 
-#: templates/shortwave/wave_list.html:22
+#: templates/shortwave/wave_list.html:23
 msgid "Showing all shortwaves."
 msgstr ""
 
-#: templates/shortwave/wave_list.html:24
+#: templates/shortwave/wave_list.html:25
 #, python-format
 msgid ""
 "\n"
@@ -104,7 +113,7 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/shortwave/wave_list.html:36
+#: templates/shortwave/wave_list.html:37
 msgid ""
 "\n"
 "      No one on this site has caught a <a href=\"http://shortwaveapp.com/"
@@ -113,10 +122,10 @@ msgid ""
 "  "
 msgstr ""
 
-#: templates/shortwave/wave_list.html:46 templates/shortwave/wave_list.html:48
+#: templates/shortwave/wave_list.html:47 templates/shortwave/wave_list.html:49
 msgid "Previous"
 msgstr ""
 
-#: templates/shortwave/wave_list.html:52 templates/shortwave/wave_list.html:54
+#: templates/shortwave/wave_list.html:53 templates/shortwave/wave_list.html:55
 msgid "Next"
 msgstr ""
