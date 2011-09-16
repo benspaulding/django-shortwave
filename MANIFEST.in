@@ -3,6 +3,7 @@ include INSTALL
 include LICENSE
 include README.rst
 include MANIFEST.in
+recursive-include docs *
 recursive-include shortwave/fixtures *
 recursive-include shortwave/locale *
 recursive-include shortwave/templates *
