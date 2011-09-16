@@ -1,20 +1,22 @@
-Thanks for downloading django-shortwave.
-
-To install it, make sure you have Python 2.4 or greater and Django 1.0 or
-later. (Note that the test settings use the DATABASES setting introduced in
-Django 1.2.) Then run this command from the command prompt:
+To install it, run the following command inside this directory::
 
     python setup.py install
 
-Note this requires a working Internet connection if you don't already have the
-Python utility "setuptools" installed.
+If you have the Python ``easy_install`` utility available, you can
+also type the following to download and install in one step::
 
-AS AN ALTERNATIVE, you can just copy the entire "shortwave" directory to
-Python's site-packages directory, which is located wherever your Python
-installation lives. Some places you might check are:
+   easy_install django-shortwave
 
-    /usr/lib/python2.4/site-packages (Unix, Python 2.4)
-    C:\\PYTHON\site-packages         (Windows)
+Or if you're using ``pip``::
 
-This second solution does not require a working Internet connection; it
-bypasses "setuptools" entirely.
+    pip install django-shortwave
+
+Or if you’d prefer you can simply place the included ``shortwave``
+directory somewhere on your Python path, or symlink to it from
+somewhere on your Python path; this is useful if you’re working from a
+Git checkout.
+
+Note that this application requires Python 2.4 or newer, and a
+functional installation of Django 1.2 or newer. You can obtain Python
+from http://www.python.org/ and Django from
+https://www.djangoproject.com/.
