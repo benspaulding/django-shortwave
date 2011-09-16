@@ -8,7 +8,12 @@ from shortwave import forms
 # Fields.
 
 class CommandTriggerField(models.CharField):
-    """Model field for a Shortwave command trigger."""
+    """
+    Model field for a Shortwave command trigger.
+
+    Uses the `shortwave.forms.CommandTriggerField`.
+
+    """
 
     description = _(u'Shortwave command trigger')
 
