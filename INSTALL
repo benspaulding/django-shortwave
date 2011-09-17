@@ -1,3 +1,5 @@
+Thanks for downloading django-shortwave.
+
 To install it, run the following command inside this directory::
 
     python setup.py install
@@ -7,7 +9,7 @@ also type the following to download and install in one step::
 
     pip install django-shortwave
 
-Or if you prefer ``easy_install``::
+Or if you're still using ``easy_install``::
 
     easy_install django-shortwave
 
